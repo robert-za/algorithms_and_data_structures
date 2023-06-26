@@ -24,7 +24,7 @@ for ( var i = 0; i < gridSize; i++ ) {
 //         var char = String.fromCharCode(65 + (i * gridSize + j));
 //         html += `<div class="cell" onclick="setCellColour(this)">${char}</div>`;
         // (i, j) grid coordinates
-//         html += `<div class="cell" onclick="setCellColour(this)">(${i}, ${j})</div>`;
+        // html += `<div class="cell" onclick="setCellColour(this)">(${i}, ${j})</div>`;
         // Blank cells
 //         html += `<div class="cell" onclick="setCellColour(this)"></div>`;
     }
