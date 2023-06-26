@@ -37,8 +37,6 @@ if __name__ == "__main__":
 
     # Test 2
     maze = read_maze("mini_maze_dfs.txt")
-    for row in maze:
-        print(row)
     start_pos = (0, 0)
     goal_pos = (2, 2)
     result = dfs(maze, start_pos, goal_pos)
@@ -53,6 +51,8 @@ if __name__ == "__main__":
 
     # Section 4 Solution
     maze = read_maze("section4_challenge_maze.txt")
+    for row in maze:
+        print(row)
     start_pos = (0, 0)
     goal_pos = (3, 3)
     result = dfs(maze, start_pos, goal_pos)
