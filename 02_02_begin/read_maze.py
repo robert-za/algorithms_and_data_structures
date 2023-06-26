@@ -4,13 +4,14 @@ Reading a maze from a text file
 Robin Andrews - https://compucademy.net/
 """
 
+PATH_TO_MAZES = "algorithms_and_data_structures/02_02_begin/mazes/"
 
 def read_maze(file_name):
     """
     Reads a maze stored in a text file and returns a 2d list containing the maze representation.
     """
     try:
-        with open(file_name) as fh:
+        with open(PATH_TO_MAZES + file_name) as fh:
             maze = [[char for char in line.strip("\n")] for line in fh]
             num_cols_top_row = len(maze[0])
             for row in maze:
@@ -21,3 +22,12 @@ def read_maze(file_name):
     except OSError:
         print("There is a problem with the file you have selected.")
         raise SystemExit
+
+if __name__ == "__main__":
+    maze = read_maze("modest_maze.txt")
+    for row in maze:
+        print(row)
+
+    challenge_maze = read_maze("challenge_maze.txt")
+    for row in challenge_maze:
+        print(row)
