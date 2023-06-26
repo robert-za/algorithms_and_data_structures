@@ -4,6 +4,8 @@ Helper functions and values for use with other files in this project.
 Robin Andrews - https://compucademy.net/
 """
 
+PATH_TO_MAZES = "algorithms_and_data_structures/02_02_begin/mazes/"
+
 offsets = {
     "right": (0, 1),
     "left": (0, -1),
@@ -17,7 +19,7 @@ def read_maze(file_name):
     Reads a maze stored in a text file and returns a 2d list containing the maze representation.
     """
     try:
-        with open(file_name, "r", newline=None) as fh:
+        with open(PATH_TO_MAZES + file_name, "r", newline=None) as fh:
             maze = [[char for char in line.strip("\r\n")] for line in fh]
             num_cols_top_row = len(maze[0])
             for row in maze:
